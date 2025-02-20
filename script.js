@@ -1,4 +1,7 @@
+const {writeDb} = require('./dataBaseFunc')
+
 function onButtonClick() {
-    value = document.getElementById("input").value;
-    document.body.style.backgroundColor = value;
+    var value = document.getElementById(input).value;
+    var data = {color: value};
+    writeDb(data);
 }
